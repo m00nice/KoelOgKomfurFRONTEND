@@ -17,11 +17,29 @@
         <div class="container m-5 bg-primary"></div>
     </header> -->
     <nav
-      class="navbar navbar-expand-md p-3 fixed-top"
+      class="navbar navbar-expand-md fixed-top"
       style="background-color: #4c4d4c"
     >
       <div class="container-xxl text-align-center"">
-        <img src="../image/kkbrand.png" class="brand">
+        <a href="https://kologkomfur.dk/search?q=" class="site-nav__link site-nav__link--icon js-search-header js-no-transition">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+          
+        </a>
+
+        <ul class="navbar-nav p-4">
+          <li class="nav-item p-5">
+            <a class="nav-link" style="color: #fff;" href="#shop">Shop</a>
+          </li>
+          <li class="nav-item p-5">
+            <a class="nav-link" style="color: #fff;" href="#brands">Brands</a>
+          </li>
+        </ul>
+
+        <a href="https://kologkomfur.dk/"> <img src="../image/kkbrand.png"  class="brand"></a>
+
+
         <!--toggle button for mobile nav-->
         <button
           class="navbar-toggler"
@@ -43,15 +61,17 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" style="color: #fff;" href="#about us">Om os</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" style="color: #fff;" href="#contact">Kontakt</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: #fff;" href="#about">Om os</a>
+            </li>
             <li class="nav-item ms-2 d-none d-md-inline">
-              <!-- <a class="btn btn-secondary" href="#pricing">Buy Now </a> -->
             </li>
           </ul>
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </svg>
         </div>
       </div>
     </nav>

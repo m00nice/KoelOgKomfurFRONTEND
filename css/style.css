@@ -21,3 +21,6 @@ body{
     width: 120px;
     height: 123px;
 }
+svg{
+    color: rgba(255, 255, 255, 0.759);
+}

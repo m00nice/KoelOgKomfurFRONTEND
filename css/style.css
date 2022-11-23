@@ -1,11 +1,11 @@
 .nav-item{
     font-size: 16px;
     letter-spacing: 0.2em;
-    font-family: Assistant,sans-serif;
     text-transform: uppercase;
     padding: 7.5px 15px;
     font-weight: lighter;
     display: inline-block;
+    font-family: Assistant,sans-serif;
     -webkit-font-smoothing: antialiased;
     
 }
@@ -24,3 +24,35 @@ body{
 svg{
     color: rgba(255, 255, 255, 0.759);
 }
+
+#checkbox{
+    background-color: #4c4d4c;
+    font-family: Assistant,sans-serif;
+    -webkit-font-smoothing: antialiased;
+
+}
+#orderlist{
+    background-color: #4c4d4c;
+    font-family: Assistant,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+#itembox{
+    background-color: #4c4d4c;
+    color:#fff;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 5px;
+    font-family: Assistant,sans-serif;
+    -webkit-font-smoothing: antialiased;
+
+}
+#dropdownMenu2{
+    background-color: #343634;
+    color:#fff;
+    font-family: Assistant,sans-serif;
+    -webkit-font-smoothing: antialiased;
+   
+}
+

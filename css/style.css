@@ -14,9 +14,14 @@ a.nav-link{
     color: #fff
 }
 
-body{
-    background-color: #343634;
+#navbar {
+    background-color: #4c4d4c;
 }
+
+body{
+    background-color: #343634 !important;
+}
+
 .brand{
     display: block;
     margin-left: auto;

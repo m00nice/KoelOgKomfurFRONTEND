@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  
+    <script src="/js/CreateCheckbox.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        const colors = ["Red","Green","Blue"];
+        const html = colors.map(color => `<label for="color-${color}">
+                <input type="checkbox" name="color" id="color-${color}" value="${color}"> ${color}
+            </label>`
+        ).join(' ');
+       document.querySelector("#root").innerHTML = html;
+    </script>
+</body>
+</html>

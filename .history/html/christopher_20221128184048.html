@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  
+    
+</head>
+<body>
+    
+    <div id="root"></div>
+    <script src="/js/CreateCheckbox.js">
+             var productlist = this.product.sort(compare);
+        for(let i = 0; i < productlist.length; i++){
+        
+            console.log(productlist[i]);
+            var productName = productlist[i].name;
+            //  generate id
+            const id = `name-${productName}`;
+        
+            // create a label
+            const label = document.createElement('label');
+            label.setAttribute("for", id);
+           
+            // create a checkbox
+            const checkbox = document.createElement('input');
+            checkbox.type = "checkbox";
+            checkbox.name = "product";
+            checkbox.value = productName;
+            checkbox.id = id;
+        
+            // place the checkbox inside a label
+            label.appendChild(checkbox);
+            // create text node
+            label.appendChild(document.createTextNode(productName));
+            // add the label to the root
+            document.querySelector("#root").appendChild(label);
+        };
+    </script>
+</body>
+</html>

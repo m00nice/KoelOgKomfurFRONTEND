@@ -1,0 +1,40 @@
+class GetProducts{
+
+    endpointUrlProducts = "http://localhost:8080/product";
+
+    constructor(product){
+        this.product = product;
+        this.fetchData();
+        console.log("constructor");
+    }
+
+    async fetchData(){
+        let response = await fetch(this.endpointUrlProducts);
+        this.dataBrands = await response.json();
+        console.log("fetchData");
+        this.updatePage();
+    }
+    
+    updateHtmlPage(){
+
+        function compare(a, b) {
+            const nameA = a.name;
+            const nameB = b.name;
+            let comparison = 0;
+            if(nameA > nameB){
+                comparison = 1;
+            }else if(nameA < nameB){
+                comparison = -1;
+            }
+            return comparison;
+            
+        }
+    
+   
+    
+   
+
+
+
+}
+}

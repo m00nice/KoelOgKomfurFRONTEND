@@ -15,7 +15,7 @@ class GetProducts{
         this.updatePage();
     }
 
-    updateHtmlPage(){
+    updatePage(){
 
         function compare(a, b) {
             const nameA = a.name;
@@ -32,40 +32,33 @@ class GetProducts{
         console.log("update");
         
         var product = this.product.sort(compare);
-        var startDiv = `<div><<label for="product">Product<label>`
-        var endDiv = `</div>`
-        var productCheckhtml= productCheckhtml+`<input type="checkbox" name="${product[i].name}" value="${product[i].name}" id="${product[i].id}"></input>`
+       
         for(var i = 0; i < product.length; i++){
     
-            const colors = [product.name];
-            const html = colors.map(color => `<label for="color-${color}">
-                    <input type="checkbox" name="color" id="color-${color}" value="${color}"> ${color}
-                </label>`
-            ).join(' ');
-           document.querySelector("#root").innerHTML = html;
+     
            
-            // console.log(productlist[i]);
-            // var productName = productlist[i].name;
-            // //  generate id
-            // const id = `name-${productName}`;
+            console.log(product[i]);
+            var productName = product[i].name;
+            //  generate id
+            const id = `name-${productName}`;
         
-            // // create a label
-            // const label = document.createElement('label');
-            // label.setAttribute("for", id);
+            // create a label
+            const label = document.createElement('label');
+            label.setAttribute("for", id);
            
-            // // create a checkbox
-            // const checkbox = document.createElement('input');
-            // checkbox.type = "checkbox";
-            // checkbox.name = "product";
-            // checkbox.value = productName;
-            // checkbox.id = id;
+            // create a checkbox
+            const checkbox = document.createElement('input');
+            checkbox.type = "checkbox";
+            checkbox.name = "product";
+            checkbox.value = productName;
+            checkbox.id = id;
         
-            // // place the checkbox inside a label
-            // label.appendChild(checkbox);
-            // // create text node
-            // label.appendChild(document.createTextNode(productName));
-            // // add the label to the root
-            // document.querySelector("#root").appendChild(label);
+            // place the checkbox inside a label
+            label.appendChild(checkbox);
+            // create text node
+            label.appendChild(document.createTextNode(productName));
+            // add the label to the root
+            document.querySelector("#root").appendChild(label);
         }
     
 
@@ -73,3 +66,4 @@ class GetProducts{
 
 
 }
+var getProducts = new GetProducts();

@@ -10,12 +10,12 @@ class GetProducts{
 
     async fetchData(){
         let response = await fetch(this.endpointUrlProducts);
-        this.dataBrands = await response.json();
+        this.product = await response.json();
         console.log("fetchData");
         this.updatePage();
     }
-    
-    updateHtmlPage(){
+
+    updatePage(){
 
         function compare(a, b) {
             const nameA = a.name;
@@ -29,12 +29,9 @@ class GetProducts{
             return comparison;
             
         }
-    
-   
-    
-    
-
-
-
+        console.log("update");
+        
+        var product = this.product.sort(compare);
+    }
 }
-}
+var getProducts = new GetProducts();

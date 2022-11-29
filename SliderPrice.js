@@ -34,4 +34,4 @@ class GetProducts{
         var product = this.product.sort(compare);
     }
 }
-var getProducts = new GetProducts();
+var getProducts = new GetProductss();

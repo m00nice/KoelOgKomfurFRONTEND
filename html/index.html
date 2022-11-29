@@ -2,90 +2,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../css/style.css" />
-    <!-- Bootstrap links -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+      crossorigin="anonymous"
+    ></script>
     <title>Køl & Komfur</title>
   </head>
-  <body>
+  <body style="background-color: #343634">
+    <!--    <header id="site-header" data-sticky= "falses">
+        <div class="container m-5 bg-primary"></div>
+    </header> -->
     <div>
       <nav
-      class="navbar navbar-expand-md fixed-top" id="navbar">
-      <!-- Center image -->
-      <div class="m-4">
-        <a href="https://kologkomfur.dk/search?q=">
+        class="navbar navbar-expand-md fixed-top"
+        style="background-color: #4c4d4c"
+      >
+        <div class="m-4">
+          <a href="https://kologkomfur.dk/search?q=">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="container justify-content-start">
+          <ul class="navbar-nav p-4 m-2">
+            <li class="nav-item p-2 m-3">
+              <a class="nav-link" style="color: #fff" href="#Ilve">Ilve</a>
+            </li>
+            <li class="nav-item p-2 m-3">
+              <a class="nav-link" style="color: #fff" href="#Pitt">Pitt</a>
+            </li>
+            <li class="nav-item p-2 m-3">
+              <a class="nav-link" style="color: #fff" href="#Fhiaba">Fhiaba</a>
+            </li>
+            <li class="nav-item p-2 m-3">
+              <a class="nav-link" style="color: #fff" href="#Barazza">Baraza</a>
+            </li>
+          </ul>
+          <a href="https://kologkomfur.dk/">
+            <img src="../image/kkbrand.png" class="brand"
+          /></a>
+        </div>
+        <div class="container justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" style="color: #fff" href="#contact"
+                >Kontakt</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: #fff" href="#about">Om os</a>
+            </li>
+          </ul>
+        </div>
+        <div class="m-5">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            role="presentation"
+            class="icon icon-user"
+            viewBox="0 0 64 64"
+          >
+            <path
+              d="M35 39.84v-2.53c3.3-1.91 6-6.66 6-11.41 0-7.63 0-13.82-9-13.82s-9 6.19-9 13.82c0 4.75 2.7 9.51 6 11.41v2.53c-10.18.85-18 6-18 12.16h42c0-6.19-7.82-11.31-18-12.16z"
+            ></path>
+          </svg>
+        </div>
+        <div class="m-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
+            width="25"
+            height="25"
             fill="currentColor"
-            class="bi bi-search"
-            viewBox="0 0 16 16">
+            class="bi bi-cart"
+            viewBox="0 0 16 16"
+          >
             <path
-              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+            />
           </svg>
-        </a>
-      </div>
-      <!-- Containers with our brand links etc. -->
-      <div class="container justify-content-start">
-        <ul class="navbar-nav p-4 m-2">
-          <li class="nav-item p-2 m-3">
-            <a class="nav-link" href="#Ilve">Ilve</a>
-          </li>
-          <li class="nav-item p-2 m-3">
-            <a class="nav-link" href="#Pitt">Pitt</a>
-          </li>
-          <li class="nav-item p-2 m-3">
-            <a class="nav-link" href="#Fhiaba">Fhiaba</a>
-          </li>
-          <li class="nav-item p-2 m-3">
-            <a class="nav-link" href="#Barazza">Baraza</a>
-          </li>
-        </ul>
-         <a href="https://kologkomfur.dk/">
-          <img src="../image/kkbrand.png" class="brand"
-        /></a>
-      </div>
-       <div class="container justify-content-end">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Kontakt</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">Om os</a>
-          </li>
-        </ul>
-      </div>
-       <div class="m-5">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="25"
-          height="25"
-          fill="currentColor"
-          class="bi bi-cart"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
-          />
-        </svg>
-      </div>
-    </nav>
-    <!-- Silly line-breaks to move main content away from navbar. A better fix definitely exists -->
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+        </div>
+      </nav>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
-    <div class="container-lg my-5">
+    <div class="container-fluid">
       <div class="row">
-         <!-- Sidebar to the left -->
         <div class="col-sm-4 col-lg-2">
           <div class="p-5 text-light" id="checkbox">
             <div class="form-check">
@@ -134,86 +158,219 @@
             </div>
           </div>
         </div>
-        <!-- Center menu -->
-        <div class="col-sm-4 col-lg-8 py-5" id="itembox"> Sorter efter: 
+
+        <div class="col-sm-4 col-lg-8 p-5" id="itembox">
+          Sorter efter:
           <div class="dropdown">
-            <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+            <button
+              class="btn dropdown-toggle"
+              type="button"
+              id="dropdownMenu2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               Pris
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
               <button class="dropdown-item" type="button">Action</button>
-              <button class="dropdown-item" type="button">Another action</button>
-              <button class="dropdown-item" type="button">Something else here</button>
+              <button class="dropdown-item" type="button">
+                Another action
+              </button>
+              <button class="dropdown-item" type="button">
+                Something else here
+              </button>
             </div>
           </div>
 
           <div class="dropdown">
-            <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+            <button
+              class="btn dropdown-toggle"
+              type="button"
+              id="dropdownMenu2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               Farve
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
               <button class="dropdown-item" type="button">Action</button>
-              <button class="dropdown-item" type="button">Another action</button>
-              <button class="dropdown-item" type="button">Something else here</button>
+              <button class="dropdown-item" type="button">
+                Another action
+              </button>
+              <button class="dropdown-item" type="button">
+                Something else here
+              </button>
             </div>
           </div>
 
           <div class="dropdown">
-            <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+            <button
+              class="btn dropdown-toggle"
+              type="button"
+              id="dropdownMenu2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               Energimærke
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
               <button class="dropdown-item" type="button">Action</button>
-              <button class="dropdown-item" type="button">Another action</button>
-              <button class="dropdown-item" type="button">Something else here</button>
+              <button class="dropdown-item" type="button">
+                Another action
+              </button>
+              <button class="dropdown-item" type="button">
+                Something else here
+              </button>
             </div>
           </div>
 
           <div class="dropdown">
-            <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+            <button
+              class="btn dropdown-toggle"
+              type="button"
+              id="dropdownMenu2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               Højde
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
               <button class="dropdown-item" type="button">Action</button>
-              <button class="dropdown-item" type="button">Another action</button>
-              <button class="dropdown-item" type="button">Something else here</button>
+              <button class="dropdown-item" type="button">
+                Another action
+              </button>
+              <button class="dropdown-item" type="button">
+                Something else here
+              </button>
             </div>
           </div>
 
           <div class="dropdown">
-            <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+            <button
+              class="btn dropdown-toggle"
+              type="button"
+              id="dropdownMenu2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               Bredde
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
               <button class="dropdown-item" type="button">Action</button>
-              <button class="dropdown-item" type="button">Another action</button>
-              <button class="dropdown-item" type="button">Something else here</button>
+              <button class="dropdown-item" type="button">
+                Another action
+              </button>
+              <button class="dropdown-item" type="button">
+                Something else here
+              </button>
             </div>
           </div>
 
           <div class="dropdown">
-            <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+            <button
+              class="btn dropdown-toggle"
+              type="button"
+              id="dropdownMenu2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               Dybde
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
               <button class="dropdown-item" type="button">Action</button>
-              <button class="dropdown-item" type="button">Another action</button>
-              <button class="dropdown-item" type="button">Something else here</button>
+              <button class="dropdown-item" type="button">
+                Another action
+              </button>
+              <button class="dropdown-item" type="button">
+                Something else hereddddd
+              </button>
             </div>
           </div>
         </div>
-        <!-- Sidebar to the right -->
-        <div class="col-sm-4 col-lg-2">
+
+        <!--        <div class="col-sm-4 col-lg-2">
           <div class="p-5 text-light" id="orderlist">
-            <div>Produker:
+            <div>
+              Produker:
               <p>Produkt1</p>
-              <p>Produkt1</p>
-              <p>Produkt1</p>
+              <p>Produkt2</p>
+              <p>Produkt3</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="container-fluid" style="width: 61%">
+      <div class="row">
+        <div class="col-4 my-2">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="../image/ilvenostalgi.png"
+              alt="Ilve"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Ilve Nostalgi</h5>
+              <span class="card-text">DOBBELT KOMFUR - 90 CM</span>
+              <p class="card-text">Ilve</p>
+              <p class="card-texta">fra 46.500 kr.</p>
+              <a href="#Ilve" class="btn btn-primary">Se produkt</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4 my-2">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="../image/fulgormilano.png"
+              alt="Ilve"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Fulgor Milano - sofia pro</h5>
+              <span class="card-text">90 cm komfur</span>
+              <p class="card-text">Ilve</p>
+              <p class="card-texta">fra 49.000 kr.</p>
+              <a href="#" class="btn btn-primary">Se produkt</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4 my-2">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="../image/ilvenostalgiblå.png"
+              alt="Ilve"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Ilve Nostalgi</h5>
+              <span class="card-text">DOBBELT KOMFUR - 100 CM</span>
+              <p class="card-text">Ilve</p>
+              <p class="card-texta">fra 48.500 kr.</p>
+              <a href="#" class="btn btn-primary">Se produkt</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4 my-2">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="../image/ilvemajestic.png"
+              alt="Ilve"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Ilve Majectic</h5>
+              <span class="card-text">DOBBELT KOMFUR - 100 CM</span>
+              <p class="card-text">Ilve</p>
+              <p class="card-texta">fra 75.000 kr.</p>
+              <a href="#" class="btn btn-primary">Se produkt</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </body>
 </html>

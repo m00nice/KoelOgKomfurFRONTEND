@@ -66,4 +66,4 @@ class GetProducts{
 
 
 }
-var getProducts = new GetProducts();
+var getProducts = new GetProductss();

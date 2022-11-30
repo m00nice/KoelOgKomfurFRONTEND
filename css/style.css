@@ -30,7 +30,7 @@
   }
   #orderlist {
     background-color: #4c4d4c;
-    font-family: Assistant, sans-serif;
+    font-family:  sans-serif;
     -webkit-font-smoothing: antialiased;
   }
   #itembox {
@@ -64,7 +64,7 @@
     -webkit-font-smoothing: antialiased;
   }
   
-  a.btn-primary {
+  button.btn-primary {
     background-color: #a7966e;
     border: #a7966e;
     border-radius: 0%;
@@ -73,13 +73,72 @@
     justify-content: center;
   }
   
-  a.btn-primary:hover {
+  button.btn-primary:hover {
     color: #a7966e;
     background-color: #4c4d4c;
   }
+
   .card-body.btn-primary {
     position: fixed-bottom;
   }
+
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 50%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #4c4d4c !important;
+  color: #e6e5db;
+  font-family: Assistant, sans-serif;
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 20px;
+  width: 80% !important; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  clear: both;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: right;
+  height: 40px;
+}
+a {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card-img-modal{
+  clear: both;
+  border-radius: 1%;
+  height: 500;
+  width: 500;
+  border: #a7966e 2px solid;
+}
+
+.productInfo {
+  clear: both;
+  display: inline;
+  float: right;
+}
   
   h5.card-title {
     font-weight: lighter;

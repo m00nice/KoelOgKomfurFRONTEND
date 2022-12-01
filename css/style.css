@@ -12,6 +12,10 @@
   body {
     background-color: #343634;
   }
+
+  a {
+    color: #fff !important;
+  }
   .brand {
     display: block;
     margin-left: auto;
@@ -71,6 +75,7 @@
     font-size: 10px;
     display: flex;
     justify-content: center;
+    width: 100%;
   }
   
   button.btn-primary:hover {
@@ -89,9 +94,8 @@
   z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
-  width: 50%; /* Full width */
+  width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
@@ -101,9 +105,10 @@
   background-color: #4c4d4c !important;
   color: #e6e5db;
   font-family: Assistant, sans-serif;
-  margin: 10% auto; /* 15% from the top and centered */
+  margin: 5% auto; /* 5% from the top and centered */
   padding: 20px;
-  width: 80% !important; /* Could be more or less, depending on screen size */
+  width: auto !important; /* Could be more or less, depending on screen size */
+  overflow: auto; /* Enable scroll if needed */
 }
 
 /* The Close Button */
@@ -112,16 +117,16 @@
   font-size: 28px;
   font-weight: bold;
   text-align: right;
-  height: 40px;
+  height: 30px;
 }
-a {
+#closeModal {
   color: #fff !important;
   text-decoration: none !important;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
+#closeModal:hover,
+#closeModal:focus {
+  color: black !important;
   text-decoration: none;
   cursor: pointer;
 }
@@ -129,8 +134,8 @@ a {
 .card-img-modal{
   clear: both;
   border-radius: 1%;
-  height: 500;
-  width: 500;
+  height: 450;
+  width: 450;
   border: #a7966e 2px solid;
 }
 

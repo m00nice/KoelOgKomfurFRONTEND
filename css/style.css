@@ -97,6 +97,11 @@
       0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
     cursor: pointer;
   }
+
+  div.card img{
+    height: 216px;
+    width: 267px;
+  }
   
   div.card:hover{
       transform: scale(1.05);
@@ -112,11 +117,11 @@
     justify-content: center;
   }
   
-  p.card-texta {
+  p.card-price {
     color: #fafaf1;
     display: flex;
     justify-content: center;
-    font-weight: bold;
+    font-weight: normal;
     text-transform: lowercase;
     font-size: 12px;
     letter-spacing: 0.2em;

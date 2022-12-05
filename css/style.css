@@ -16,7 +16,6 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
     width: 120px;
     height: 123px;
   }
@@ -96,6 +95,7 @@
       0.1s box-shadow,
       0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
     cursor: pointer;
+    
   }
 
   div.card img{
@@ -116,7 +116,7 @@
     display: flex;
     justify-content: center;
   }
-  
+ 
   p.card-price {
     color: #fafaf1;
     display: flex;
@@ -124,10 +124,15 @@
     font-weight: normal;
     text-transform: lowercase;
     font-size: 12px;
-    letter-spacing: 0.2em;
+    
   }
 
  #checkbox{
 position: fixed;
 
+ }
+ div ul li i{
+  color: white;
+  padding-top: 10px;
+  
  }

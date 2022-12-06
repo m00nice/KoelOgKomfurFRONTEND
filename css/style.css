@@ -142,12 +142,6 @@
   width: 450;
   border: #a7966e 2px solid;
 }
-
-.productInfo {
-  clear: both;
-  display: inline;
-  float: right;
-}
   
   h5.card-title {
     font-weight: lighter;

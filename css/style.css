@@ -108,7 +108,11 @@
   margin: 5% auto; /* 5% from the top and centered */
   padding: 20px;
   width: auto !important; /* Could be more or less, depending on screen size */
-  overflow: auto; /* Enable scroll if needed */
+}
+
+.productInfo{
+  height: 40vh; 
+  overflow: auto;
 }
 
 /* The Close Button */

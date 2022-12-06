@@ -8,6 +8,7 @@
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     />
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/search.js" defer></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -27,18 +28,23 @@
         style="background-color: #4c4d4c"
       >
         <div class="m-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            fill="currentColor"
-            class="bi bi-search"
-            viewBox="0 0 16 16"
+          <a
+            href="javascript:showSearchBox();"
+            class="site-nav__link site-nav__link--icon js-search-header js-no-transition"
           >
-            <path
-              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-            />
-          </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+              />
+            </svg>
+          </a>
         </div>
         <div class="container justify-content-start">
           <ul class="navbar-nav p-4 m-2">
@@ -51,19 +57,20 @@
             <li class="nav-item p-2 m-3">
               <a class="nav-link" style="color: #fff" href="#Fhiaba">Fhiaba</a>
             </li>
-             <li class="nav-item p-2 m-3">
+            <li class="nav-item p-2 m-3">
               <a class="nav-link" style="color: #fff" href="#Barazza">Baraza</a>
-            </li> 
+            </li>
           </ul>
           <a href="https://kologkomfur.dk/">
             <img src="../image/kkbrand.png" class="brand"
           /></a>
         </div>
         <div>
-          <ul class="navbar-nav justify-content-start">
-          
+          <ul class="navbar-nav">
             <li class="nav-item">
-              <a href="mailto:info@kologkomfur.dk"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+              <a href="mailto:info@kologkomfur.dk"
+                ><i class="fa fa-envelope" aria-hidden="true"></i
+              ></a>
               <!-- <a class="nav-link" style="color: #fff" href="#contact">Kontakt</a> -->
             </li>
 
@@ -108,6 +115,93 @@
       <br />
       <br />
     </div>
+
+    <section
+      class="search-container"
+      
+      id="search-box"
+    >
+      <form action="">
+        <i class="fas fa-search"></i
+        ><!-- icon tag -->
+        <input
+          type="search"
+          name=""
+          title="skriv produkt id her"
+          id="search-item"
+          placeholder="Søg i butikken..."
+          onkeyup="search()"
+        />
+      </form>
+
+      <div class="product-list" id="product-list">
+        <div class="products">
+          <img src="../image/iLVE-Nostalgie-Dobbelt-Komfur-120-cm-P12N-Komfur-ILVE-2_1800x1800.jpg" alt="" />
+          <div class="p-details" id="productbody">
+            <h3>Ilve Nostalgi dobbelt komfur 120 cm</h3>
+            <h6>ilve - p12n</h6>
+            <h4>fra 102.975kr.</h4>
+          </div>
+        </div>
+        <div class="products">
+          <img src="../image/iLVE-Nostalgie-Komfur-70-cm-P07NE3-Komfur-ILVE-70-cm-Grafit-mat_1800x1800.jpg" alt="" />
+          <div class="p-details">
+            <h3>ILVE nostalgi komfur 70 cm</h3>
+            <h6>ilve - p07ne3</h6>
+            <h4>fra 33.000 kr.</h4>
+          </div>
+        </div>
+        <div class="products">
+          <img src="../image/iLVE-Professional-Plus-90-cm-P096WE3PI09WE3-Komfur-ILVE_1800x1800.webp" alt="" />
+          <div class="p-details">
+            <h3>ilve professional plus dobbelt komfur 90 cm</h3>
+            <h6>ilve - P096WE3PI09WE3</h6>
+            <h4>fra 42.000 kr.</h4>
+          </div>
+        </div>
+        <div class="products">
+          <img src="../image/iLVE-Majestic-Dobbelt-Komfur-100-cm-MD106DNE3-Komfur-ILVE_1800x1800 (1).webp" alt="" />
+          <div class="p-details">
+            <h3>ilve majestic dobbelt komfur - 100 cm</h3>
+            <h6>Ilve - MD106DNE3</h6>
+            <h4>fra 75.000 kr.</h4>
+          </div>
+        </div>
+        <div class="products">
+          <img
+            src="../image/Dolce-Vita-90-cm-Komfur-ILVE_1800x1800.jpg"
+            alt=""
+          />
+          <div class="p-details">
+            <h3>dolce vita komfur 90 cm</h3>
+            <h6>Ilve - dv901800</h6>
+            <h4>fra 26.995 kr.</h4>
+          </div>
+        </div>
+        <div class="products">
+          <img
+            src="../image/iLVE-Pro-Line-Komfur-100-cm-LD10-Komfur-ILVE-2_56afe980-2a8b-4940-90dd-0b6fe29618a5_1800x1800.jpg"
+            alt=""
+          />
+          <div class="p-details">
+            <h3>ilve pro-line Komfur  100 cm</h3>
+            <h6>Ilve - LD10</h6>
+            <h4>fra 33.999 kr.</h4>
+          </div>
+        </div>
+        <div class="products">
+          <img
+            src="../image/iLVE-Nostalgie-Dobbelt-Komfur-90-cm-PD096NE3-Komfur-ILVE-Gas-Grafit-mat_1800x1800.jpg"
+            alt=""
+          />
+          <div class="p-details">
+            <h3>ilve nostalgie dobbelt komfur 90 cm</h3>
+            <h6>ilve - PD096NE3</h6>
+            <h4>fra 46.500 kr.</h4>
+          </div>
+        </div>
+      </div>
+    </section>
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-4 col-lg-2">
@@ -218,27 +312,6 @@
               </button>
             </div>
           </div>
-
-          <!--           <div class="dropdown">
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenu2"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Dybde
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <button class="dropdown-item" type="button">Action</button>
-              <button class="dropdown-item" type="button">
-                Another action
-              </button>
-              <button class="dropdown-item" type="button">
-                Something else hereddddd
-              </button>
-            </div>
-          </div> -->
         </div>
       </div>
     </div>
@@ -258,7 +331,7 @@
               <span class="card-text">DOBBELT KOMFUR - 120 CM</span>
               <p class="card-text">Ilve - P12N</p>
               <p class="card-price">fra 102.975 kr.</p>
-              <a href="#Ilve" class="btn btn-primary">Se produkt</a>
+              <a href="#Ilve" class="btn btn-secondary">Se produkt</a>
             </div>
           </div>
         </div>
@@ -276,7 +349,7 @@
               <span class="card-text">komfur- 70 cm</span>
               <p class="card-text">Ilve - p07ne3</p>
               <p class="card-price">fra 33.000 kr.</p>
-              <a href="#" class="btn btn-primary">Se produkt</a>
+              <a href="#" class="btn btn-secondary">Se produkt</a>
             </div>
           </div>
         </div>
@@ -291,10 +364,10 @@
             />
             <div class="card-body">
               <h5 class="card-title">Ilve professional plus</h5>
-              <span class="card-text">KOMFUR - 90 CM</span>
+              <span class="card-text">dobbelt KOMFUR - 90 CM</span>
               <p class="card-text">Ilve - P096WE3PI09WE3</p>
               <p class="card-price">fra 42.000 kr.</p>
-              <a href="#" class="btn btn-primary">Se produkt</a>
+              <a href="#" class="btn btn-secondary">Se produkt</a>
             </div>
           </div>
         </div>
@@ -312,7 +385,7 @@
               <span class="card-text">DOBBELT KOMFUR - 100 CM</span>
               <p class="card-text">Ilve - MD106DNE3</p>
               <p class="card-price">fra 75.000 kr.</p>
-              <a href="#" class="btn btn-primary">Se produkt</a>
+              <a href="#" class="btn btn-secondary">Se produkt</a>
             </div>
           </div>
         </div>
@@ -330,7 +403,7 @@
               <span class="card-text">komfur - 90 CM</span>
               <p class="card-text">Ilve - dv901800</p>
               <p class="card-price">fra 26.995 kr.</p>
-              <a href="#" class="btn btn-primary">Se produkt</a>
+              <a href="#" class="btn btn-secondary">Se produkt</a>
             </div>
           </div>
         </div>
@@ -348,7 +421,7 @@
               <span class="card-text">KOMFUR - 100 CM</span>
               <p class="card-text">Ilve - LD10</p>
               <p class="card-price">fra 33.999 kr.</p>
-              <a href="#" class="btn btn-primary">Se produkt</a>
+              <a href="#" class="btn btn-secondary">Se produkt</a>
             </div>
           </div>
         </div>
@@ -363,10 +436,10 @@
             />
             <div class="card-body">
               <h5 class="card-title">Ilve nostalgie</h5>
-              <span class="card-text"> dobbelt KOMFUR - 90 CM</span>
+              <span class="card-text">dobbelt KOMFUR - 90 CM</span>
               <p class="card-text">Ilve - PD096NE3</p>
               <p class="card-price">fra 46.500 kr.</p>
-              <a href="#" class="btn btn-primary">Se produkt</a>
+              <a href="#" class="btn btn-secondary">Se produkt</a>
             </div>
           </div>
         </div>

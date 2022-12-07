@@ -57,8 +57,11 @@ class GenerateProducts{
 
         htmlCode = htmlCode +
         
-        `<div class="col-4 my-2">
-        <div class="card">
+        `
+        
+
+        <div class="col-4 my-2">
+        <div class="card" id="prod-${productList[i].id}">
           <img
             class="card-img-top"
             src="${productList[i].imageURL}"
@@ -67,12 +70,16 @@ class GenerateProducts{
           <div class="card-body">
             <h5 class="card-title">${productList[i].name}</h5>
             <span class="card-text">DOBBELT KOMFUR - 90 CM</span>
-            <p class="card-text">${productList[i].brand}</p>
+            <p class="card-text">${productList[i].brand.name}</p>
             <p class="card-texta">fra ${productList[i].price} kr.</p>
-            <a href="#Ilve" class="btn btn-primary">Se produkt</a>
+            <a id="modalBtn" class="btn btn-primary">Se produkt</a>
+            
           </div>
         </div>
-      </div>`;
+      </div>
+      
+
+      `;
         }
 
         var div = document.getElementById("content-product");

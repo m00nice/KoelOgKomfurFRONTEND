@@ -186,7 +186,7 @@
   
     /* The Modal (background) */
 
-.modal {
+#content-modal {
 
   display: none; /* Hidden by default */
 

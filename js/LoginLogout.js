@@ -18,20 +18,6 @@ class LoginLogout {
             location.reload();
         }
 
-        // const login = (e) => {
-        //   e.preventDefault();
-        //   console.log(name, email, password);
-        //   const userData = {
-        //     name,
-        //     email,
-        //     password,
-        //   };
-        //   localStorage.setItem('token-info', JSON.stringify(userData));
-        //   setIsLoggedin(true);
-        //   setName('');
-        //   setEmail('');
-        //   setPassword('');
-        // };
         if (isLoggedin) {
 
             var logoutbtn = `
@@ -46,22 +32,7 @@ class LoginLogout {
     
     })
 
-            // var div = document.getElementById("login");
-            // div.innerHTML = logoutbtn;
-            // const logout = (event) => {
-            //     {
-            //         event.preventDefault()
-            //         const div = document.getElementById('container');
-            //         localStorage.removeItem('user')
-            //         localStorage.setItem(isLoggedin(false));
-            //         div.insertAdjacentHTML(
-            //             'beforeend',
-            //             `<span style="background-color: green">You have logged out.</code>`,
-            //         );
-
-            //     }
-
-            // };
+           
 
 
         } else {
@@ -99,11 +70,11 @@ class LoginLogout {
                     }); let data = await res.text();
 
 
-
                 if (res.status == 200) {
 
                     localStorage.setItem('user', JSON.stringify(data));
                     location.reload();
+                  
                     div.innerHTML =
                         // 'beforeend',
                         `<span style="background-color: green">` + JSON.stringify(data) + `</code>`

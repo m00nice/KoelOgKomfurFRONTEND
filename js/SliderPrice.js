@@ -58,12 +58,8 @@ class GetProducts{
             // create text node
             label.appendChild(document.createTextNode(productName));
             // add the label to the root
-            document.querySelector("#checkbox").appendChild(label);
+            document.querySelector("#slider").appendChild(label);
         }
-    
-
-};
-
-
+}
 }
 var getProducts = new GetProducts();

@@ -1,0 +1,298 @@
+.nav-item {
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 7.5px 15px;
+    font-weight: lighter;
+    display: inline-block;
+    font-family: Assistant, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  body {
+    background-color: #343634;
+  }
+
+  a {
+    color: #fff !important;
+  }
+  .brand {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    width: 120px;
+    height: 123px;
+  }
+  svg {
+    color: rgba(255, 255, 255, 0.759);
+  }
+  
+  #checkbox {
+    font-family: Assistant, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  #orderlist {
+    background-color: #4c4d4c;
+    font-family:  sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  #itembox {
+    height: 200px;
+    color: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 5px;
+    font-family: Assistant, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  #dropdownMenu2 {
+    color: #fff;
+    font-family: Assistant, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  div.card-body {
+    background-color: #343634;
+    color: #fff;
+    height: 152px;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 7.5px 15px;
+    font-weight: lighter;
+    display: inline-block;
+    font-family: Assistant, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  button.btn-primary {
+    background-color: #a7966e;
+    border: #a7966e;
+    border-radius: 0%;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  button.btn-primary:hover {
+    color: #a7966e;
+    background-color: #4c4d4c;
+  }
+
+  .card-body.btn-primary {
+    position: fixed-bottom;
+  }
+
+  /* The Modal (background) */
+#content-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #4c4d4c !important;
+  color: #e6e5db;
+  font-family: Assistant, sans-serif;
+  margin: 5% auto; /* 5% from the top and centered */
+  padding: 20px;
+  width: auto !important; /* Could be more or less, depending on screen size */
+}
+
+
+.productInfo{
+  height: 40vh; 
+  overflow: auto;
+}
+
+/* The Close Button */
+.close {
+  clear: both;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: right;
+  height: 30px;
+}
+#closeModal {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+#closeModal:hover,
+#closeModal:focus {
+  color: black !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card-img-modal{
+  clear: both;
+  border-radius: 1%;
+  height: 450;
+  width: 450;
+  border: #a7966e 2px solid;
+}
+  
+  h5.card-title {
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bolder;
+  }
+  
+  div.card {
+    border-color: #a7966e;
+    border-radius: 4px;
+    transition: 0.1s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+      0.1s box-shadow,
+      0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+    cursor: pointer;
+  }
+  
+  div.card:hover{
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  }
+  
+  span.card-text {
+    display: flex;
+    justify-content: center;
+  }
+  p.card-text {
+    display: flex;
+    justify-content: center;
+  }
+  
+  p.card-texta {
+    color: #fafaf1;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    text-transform: lowercase;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+  }
+  
+    /* The Modal (background) */
+
+#content-modal {
+
+  display: none; /* Hidden by default */
+
+  position: fixed; /* Stay in place */
+
+  z-index: 1; /* Sit on top */
+
+  left: 0;
+
+  top: 0;
+
+  width: 100%; /* Full width */
+
+  height: 100%; /* Full height */
+
+  background-color: rgb(0,0,0); /* Fallback color */
+
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+
+
+/* Modal Content/Box */
+
+.modal-content {
+
+  background-color: #4c4d4c !important;
+
+  color: #e6e5db;
+
+  font-family: Assistant, sans-serif;
+
+  margin: 5% auto; /* 5% from the top and centered */
+
+  padding: 20px;
+
+  width: auto !important; /* Could be more or less, depending on screen size */
+
+  overflow: auto; /* Enable scroll if needed */
+
+}
+
+
+
+/* The Close Button */
+
+.close {
+
+  clear: both;
+
+  font-size: 28px;
+
+  font-weight: bold;
+
+  text-align: right;
+
+  height: 30px;
+
+}
+
+#closeModal {
+
+  color: #fff !important;
+
+  text-decoration: none !important;
+
+}
+
+
+
+#closeModal:hover,
+
+#closeModal:focus {
+
+  color: black !important;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+}
+
+.card-img-modal{
+
+  clear: both;
+
+  border-radius: 1%;
+
+  height: 450;
+
+  width: 450;
+
+  border: #a7966e 2px solid;
+
+}
+
+
+
+.productInfo {
+
+  clear: both;
+
+  display: inline;
+
+  float: right;
+
+}

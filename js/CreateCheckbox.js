@@ -58,7 +58,7 @@ class GetProducts{
             // create text node
             label.appendChild(document.createTextNode(productName));
             // add the label to the root
-            document.querySelector("#root").appendChild(label);
+            document.querySelector("#checkbox").appendChild(label);
         }
     
 
@@ -66,4 +66,4 @@ class GetProducts{
 
 
 }
-var getProducts = new GetProductss();
+var getProducts = new GetProducts();

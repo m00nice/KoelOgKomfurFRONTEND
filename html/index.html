@@ -8,9 +8,10 @@
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="/css/modalStyle.css" />
-    <link rel="stylesheet" href="/css/cartStyle.css">
+    <link rel="stylesheet" href="../css/modalStyle.css" />
+    <link rel="stylesheet" href="../css/cartStyle.css">
     <script src="../js/search.js" defer></script>
+    <script src="../js/GenerateProducts.js" defer></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -49,8 +50,19 @@
           </a>
         </div>
         <div class="container justify-content-start">
-          <ul class="navbar-nav p-4 m-2" id="content-brand">
-            
+          <ul class="navbar-nav p-4 m-2">
+            <li class="nav-item p-2 m-3">
+              <a class="nav-link" style="color: #fff" href="#Ilve">Ilve</a>
+            </li>
+            <li class="nav-item p-2 m-3">
+              <a class="nav-link" style="color: #fff" href="#Pitt">Pitt</a>
+            </li>
+            <li class="nav-item p-2 m-3">
+              <a class="nav-link" style="color: #fff" href="#Fhiaba">Fhiaba</a>
+            </li>
+            <li class="nav-item p-2 m-3">
+              <a class="nav-link" style="color: #fff" href="javascript: updatePage()">Baraza</a>
+            </li>
           </ul>
           <a href="https://kologkomfur.dk/">
             <img src="../image/kkbrand.png" class="brand"
@@ -322,7 +334,7 @@
       </div>
     </div>
 
-    <div class="container-fluid" style="width: 61%">
+   <!--  <div class="container-fluid" style="width: 61%"> -->
       <div id="content-product" class="row">
         
         </div>
@@ -332,5 +344,6 @@
       </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="/js/GenerateProducts.js"></script>
+
+  <!-- <script src="/js/main.js"></script> -->
 </html>

@@ -98,25 +98,28 @@ class GenerateProducts{
         htmlCode = htmlCode +
         
         `
-        
-
         <div class="col-4 my-2">
         <div class="card" id="${productList[i].id}">
           <img
             class="card-img-top"
-            src="${productList[i].imageURL}"
+            src="${productList[i].imgURL}"
             alt="${productList[i].name} IMAGE"
           />
           <div class="card-body">
             <h5 class="card-title">${productList[i].name}</h5>
-            <span class="card-text">DOBBELT KOMFUR - 90 CM</span>
-            <p class="card-text">${productList[i].brand.name}</p>
-            <p class="card-texta">fra ${productList[i].price} kr.</p>
-            <button id="modalBtn-${productList[i].id}" onclick='fillModal(${JSON.stringify(productList[i])})' class="btn btn-primary">Se produkt</button>
+            <span class="card-text">${productList[i].productHardware}</span>
+            
+           <p class="card-texta">fra ${productList[i].price} kr.</p>
+            <button id="modalBtn-${
+              productList[i].id
+            }" onclick='fillModal(${JSON.stringify(
+          productList[i]
+        )})' class="btn btn-primary">Se produkt</button>
             
           </div>
         </div>
       </div>
+
       
 
       `;

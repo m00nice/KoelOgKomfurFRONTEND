@@ -3,7 +3,7 @@ var modalContent = document.getElementById("content-modal");
 var cart = document.getElementById("cart");
 
 class GenerateIlve {
-  endpointUrlProduct = "http://localhost:8080/product/brandId?id=1";
+  endpointUrlProduct = "http://localhost:8080/product";
 
   constructor(dataProduct) {
     this.dataProduct = dataProduct;

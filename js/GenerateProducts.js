@@ -5,9 +5,13 @@ var cart = document.getElementById("cart")
 class GenerateProducts{
  
     endpointUrlProduct = "http://localhost:8080/product";
+    
+    endpointUrlBrand = "http://localhost:8080/brand";
 
-    constructor(dataProduct){
+    constructor(dataProduct,dataBrand){
         this.dataProduct = dataProduct;
+
+        this.dataBrand = dataBrand;
 
         console.log("yo")
 
@@ -16,9 +20,12 @@ class GenerateProducts{
     
     async fetchData(){
         let responseA = await fetch(this.endpointUrlProduct);
+        let responseB = await fetch(this.endpointUrlBrand);
+
         console.log(responseA);
 
         this.dataProduct = await responseA.json();
+        this.dataBrand = await responseB.json();
         
 
         this.updatePage();
@@ -28,6 +35,25 @@ class GenerateProducts{
 
     updatePage(){
 
+      var brandlist = this.dataBrand.sort(alphAsc);
+
+      let htmlCodeBrand = ``;
+
+      for(var i = 0; i < brandlist.length; i++){
+
+      htmlCodeBrand = htmlCodeBrand + `
+      
+      <li class="nav-item p-2 m-3">
+              <a class="nav-link" style="color: #fff" onclick="getBrandProduct(${brandlist[i].productList})">${brandlist[i].name}</a>
+            </li>
+    
+      `
+    }
+
+    var divBrand = document.getElementById("content-brand");
+
+    divBrand.innerHTML = htmlCodeBrand;
+        
       let modalHTML = `<div class="modal-content">
       <div class="close"><a id="closeModal" href="javascript:closePopup()">&times;</a></div>
       <div class="row">
@@ -38,7 +64,7 @@ class GenerateProducts{
         <div class="col">
           <h1 id="modal-titel">Titel</h1>
             <h2 id="modal-price">price</h2>
-            <h3><button id="add-to-cart" onclick="">Tilføj til kurv</button></h3>
+            <h3><button id="add-to-cart" >Tilføj til kurv</button></h3>
             <p><small>Told og moms inkluderet<a
                   href="https://kologkomfur.dk/policies/shipping-policy" target="_blank">Leveringskomkostninger</a> udregnet ved
                 betaling.</small></p>
@@ -52,18 +78,7 @@ class GenerateProducts{
 
       modalContent.innerHTML = modalHTML;
 
-        function alphAsc(a, b) {
-            const nameA = a.name;
-            const nameB = b.name;
-            let comparison = 0;
-            if(nameA > nameB){
-                comparison = 1;
-            }else if(nameA < nameB){
-                comparison = -1;
-            }
-            return comparison;
-            
-        }
+        
 
         var productList = this.dataProduct.sort(alphAsc);
 
@@ -127,6 +142,19 @@ class GenerateProducts{
 
 }
 
+}
+
+function alphAsc(a, b) {
+  const nameA = a.name;
+  const nameB = b.name;
+  let comparison = 0;
+  if(nameA > nameB){
+      comparison = 1;
+  }else if(nameA < nameB){
+      comparison = -1;
+  }
+  return comparison;
+  
 }
 
  //fill modal with product's values
@@ -251,25 +279,31 @@ function showCart(){
   console.log(itemId);
   for (var i = itemId.length - 1; i >= 0; i--) {
     // remove element if index is odd
-    if (i % 2 == 1)
-      cartItems.push(itemId[i, 1]);
+    if (i % 2 == 1){
+      var itemTemp = itemId[i].slice(0 ,itemId[i].length)
+      var itemStringFinal
+      if(i != itemId.length-1){
+      itemStringFinal = itemTemp.slice(0 ,itemId[i].length-2)
+    }else{itemStringFinal = itemTemp;}
+      itemObjFinal = JSON.parse(itemStringFinal);
+      cartItems.push(itemObjFinal);
+      itemObjFinal['idLocStor'] = itemId[i-1];
+      console.log(itemObjFinal);
+      console.log(itemObjFinal);
+    }
   }
-  console.log(cartItems);
 
-  for(var i = 0; i < cartItems.length; i++){
-    var sliceItem = cartItems[i].slice(0 ,cartItems[i].length-2)
-    cartItems[i] = sliceItem.slice(0 ,cartItems[i].length-2)
-  }
-
-  cartItems = JSON.stringify(cartItems);
   console.log(cartItems);
-  cartItems = JSON.parse(cartItems)
+  
   var totalPrice = 0;
-  console.log(cartItems);
 
+    var startDiv = `</div>`;
+    var endDiv = `</div>`;
+    var div = ``;
+    
   for(var i = 0; i < cartItems.length; i++){
     totalPrice = totalPrice + cartItems[i].price;
-    var div = ``;
+    
 
     div = div + `
 
@@ -285,7 +319,7 @@ function showCart(){
           </div>
           <div class="product-price">${cartItems[i].price}</div>
           <div class="product-removal">
-            <button class="remove-product" onclick="removeItem(id)">
+            <button class="remove-product" onclick="removeItem(${cartItems[i].idLocStor})">
               Remove
             </button>
           </div>
@@ -295,11 +329,14 @@ function showCart(){
     `
 
   }
-
-cart.innerHTML = div;
+  div = startDiv + div + endDiv;
+  cart.innerHTML = div;
   cart.style.display = "block";
 }
 
+function removeItem(id){
+
+}
 
 loadCartNumber();
 

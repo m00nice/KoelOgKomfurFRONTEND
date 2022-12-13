@@ -150,7 +150,7 @@ position: fixed;
 
 .search-container {
   width: 450px;
-  height: 145px;
+  height: auto;
   background-color: #4c4d4c;
   border-radius: 5px;
   box-shadow: 4px 4px 30px rgba(0, 0, 0.06);

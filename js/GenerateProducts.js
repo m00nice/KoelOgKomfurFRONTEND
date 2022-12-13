@@ -44,7 +44,7 @@ class GenerateProducts{
       htmlCodeBrand = htmlCodeBrand + `
       
       <li class="nav-item p-2 m-3">
-              <a class="nav-link" style="color: #fff" onclick="getBrandProduct(${brandlist[i].productList})">${brandlist[i].name}</a>
+              <a class="nav-link" style="color: #fff" id="filter-brand-${brandlist[i].id}">${brandlist[i].name}</a>
             </li>
     
       `
@@ -138,9 +138,67 @@ class GenerateProducts{
                 addProductToCart();
                 cartAmount();
             })
-    
+
+            let filterByBrandButton
+
+            for(var i = 0; i < brandlist.length; i++){
+
+            filterByBrandButton = document.getElementById("filter-brand-"+brandlist[i].id)
+
+            filterByBrandButton.addEventListener('click', () => {
+              getBrandProduct(productList, brandlist[i].id);
+            })
+            }
 
 }
+
+}
+
+function getBrandProduct(productList, id){
+
+  let htmlCode = ``;
+
+  var divStart = `<div>
+  <div>`;
+
+  var divEnd = `</div></div>`;
+
+  for(var i = 0; i < productList.length; i++){
+       if(productList[i].brand.id == id){     
+    console.log(productList);
+
+    htmlCode = htmlCode +
+    
+    `
+    
+
+    <div class="col-4 my-2">
+    <div class="card" id="${productList[i].id}">
+      <img
+        class="card-img-top"
+        src="${productList[i].imageURL}"
+        alt="${productList[i].name} IMAGE"
+      />
+      <div class="card-body">
+        <h5 class="card-title">${productList[i].name}</h5>
+        <span class="card-text">DOBBELT KOMFUR - 90 CM</span>
+        <p class="card-text">${productList[i].brand.name}</p>
+        <p class="card-texta">fra ${productList[i].price} kr.</p>
+        <button id="modalBtn-${productList[i].id}" onclick='fillModal(${JSON.stringify(productList[i])})' class="btn btn-primary">Se produkt</button>
+        
+      </div>
+    </div>
+  </div>
+  
+
+  `};
+    }
+
+    var div = document.getElementById("content-product");
+
+    htmlCode = divStart + htmlCode + divEnd;
+
+    div.innerHTML = htmlCode;
 
 }
 

@@ -45,6 +45,7 @@ var drawer = function () {
     };
     // Open Drawer
     var openDrawer = function (trigger) {
+      
       // Find target
       var target = document.getElementById(trigger.getAttribute('aria-controls'));
       // Make it active

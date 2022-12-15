@@ -44,7 +44,7 @@ class GenerateProducts{
       htmlCodeBrand = htmlCodeBrand + `
       
       <li class="nav-item p-2 m-3">
-              <a class="nav-link" style="color: #fff" id="filter-brand-${brandlist[i].id}">${brandlist[i].name}</a>
+              <a class="nav-link" style="color: #fff" id="filter-brand-${brandlist[i].id}" onclick='getBrandProduct(${brandlist[i].id})'>${brandlist[i].name}</a>
             </li>
     
       `
@@ -107,7 +107,7 @@ class GenerateProducts{
           />
           <div class="card-body">
             <h5 class="card-title">${productList[i].name}</h5>
-            <span class="card-text">${productList[i].productHardware}</span>
+            <span class="card-text">${productList[i].brand.name}</span>
             
            <p class="card-texta">fra ${productList[i].price} kr.</p>
             <button id="modalBtn-${
@@ -142,22 +142,13 @@ class GenerateProducts{
                 cartAmount();
             })
 
-            let filterByBrandButton
-
-            for(var i = 0; i < brandlist.length; i++){
-
-            filterByBrandButton = document.getElementById("filter-brand-"+brandlist[i].id)
-
-            filterByBrandButton.addEventListener('click', () => {
-              getBrandProduct(productList, brandlist[i].id);
-            })
-            }
-
 }
 
 }
 
-function getBrandProduct(productList, id){
+function getBrandProduct(id){
+  
+  var productList = generateProducts.dataProduct;
 
   let htmlCode = ``;
 
@@ -254,10 +245,6 @@ window.onclick = function(event) {
     modalContent.style.display = "none";
   }
 
-  if(event.target == cart){
-    cart.style.display = "none";
-  }
-
 }
 
 
@@ -276,6 +263,7 @@ function loadCartNumber(){
   if(productNumber){
       document.getElementById('cartNumber').textContent = productNumber;
   }
+  updateCart();
 }
 
 function cartAmount() {
@@ -326,11 +314,11 @@ function addProductToCart(){
 
   localStorage.setItem("productsInCart", JSON.stringify(cartItems))
   
-
+ updateCart();
 }
 
-function showCart(){
-  cart = document.getElementById("cart");
+function updateCart(){
+  cart = document.getElementById("content-cart");
   var itemId = localStorage.getItem("productsInCart").slice(0,-1)
   console.log(itemId);
   var itemId = itemId.split("arraySplit\":").join("arraySplit").split("arraySplit");
@@ -348,6 +336,7 @@ function showCart(){
     }else{itemStringFinal = itemTemp;}
       itemObjFinal = JSON.parse(itemStringFinal);
       cartItems.push(itemObjFinal);
+      itemId[i-1] = "arraySplit"+itemId[i-1]+"arraySplit";
       itemObjFinal['idLocStor'] = itemId[i-1];
       console.log(itemObjFinal);
       console.log(itemObjFinal);
@@ -374,13 +363,13 @@ function showCart(){
             <img src="${cartItems[i].imgUrl}">
           </div>
           <div class="product-details">
-            <div class="product-title">${cartItems[i].name}</div>
-            <div class="product-title">${cartItems[i].skuId}</div>
+            <div class="product-title">Navn: ${cartItems[i].name}</div>
+            <div class="product-title">ID: ${cartItems[i].skuId}</div>
             <p class="product-description">${cartItems[i].description}</p>
           </div>
-          <div class="product-price">${cartItems[i].price}</div>
+          <div class="product-price">Pris: ${cartItems[i].price} kr.</div>
           <div class="product-removal">
-            <button class="remove-product" onclick="removeItem(${cartItems[i].idLocStor})">
+            <button class="remove-product" onclick='removeItem(${JSON.stringify(cartItems[i].idLocStor)})'>
               Remove
             </button>
           </div>
@@ -390,13 +379,17 @@ function showCart(){
     `
 
   }
-  div = startDiv + div + endDiv;
+
+  var totalPriceDiv = `<div><button>Send Odre</button> Total pris: ${totalPrice} kr.</div>`;
+
+  div = startDiv + div + endDiv + totalPriceDiv;
   cart.innerHTML = div;
-  cart.style.display = "block";
+  
 }
 
 function removeItem(id){
-
+    localStorage.removeItem(id)
+    updateCart;
 }
 
 loadCartNumber();
